@@ -1,0 +1,74 @@
+top vmstat
+ls -al /dev/disk/by-id lsblk blkid
+cat /proc/cpuinfo lscpu dmesg lm_sensors
+sync && echo 3 > /proc/sys/vm/drop_caches
+Alt + SysRq, REISUB
+e2scrub_all e4defrag e2fsck -D smartctl -a /dev/sd hdparm -I /dev/sd badblocks -sv -b 4096 -c 1024 /dev/sd
+mount -o noatime,commit=60 /dev/sd /mnt/1 
+cfdisk mkfs.ext4 -m 0 -b 4096 -i 8388608 /dev/sd
+find / -name \*.log
+
+cat  >> .bashrc
+echo 'unset HISTFILE' >> ~/.bash_profile
+wiki.archlinux.org/index.php/Improving_performance
+wiki.archlinux.org/index.php/Power_management
+wiki.archlinux.org/index.php/kernel_parameters
+quiet i915.enable_fbc=1
+cat /proc/sys/kernel/watchdog
+/etc/sysctl.d/99-sysctl.conf
+vm.swappiness=1
+kernel.nmi_watchdog=0
+kernel.soft_watchdog=0
+kernel.core_pattern=|/bin/false
+/etc/systemd/journald.conf
+Storage=none
+rm -r /var/log/journal/
+/etc/modprobe.d/audio_powersave.conf
+options snd_hda_intel power_save=1
+nobeep.conf
+blacklist pcspkr
+
+~/.config/sway/config
+set $term
+input type:pointer {
+scroll_factor 2
+}
+bar {
+...
+    mode hide
+}
+default_border none
+hide_edge_borders smart
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2-
+bindsym XF86AudioMute exec amixer -q set Master toggle
+output VGA-1 mode 1280x1024@75Hz
+for_window [app_id="mpv"] floating enable
+xwayland disable
+
+tar -cf - dir | openssl enc -aes256 -pbkdf2 -pass pass: -out .tar
+openssl enc -d -aes256 -pbkdf2 -pass pass: -in .tar | tar -x
+tar -zcf - dir | openssl enc -aes256 -pbkdf2 -pass pass: -out .tgz
+openssl enc -d -aes256 -pbkdf2 -pass pass: -in .tgz | tar -xz
+
+swaymsg "output * dpms on"
+swaymsg "output * dpms off"
+
+ratbagctl "Logitech G203 Prodigy Gaming Mouse" led 0 set mode off
+export MOZ_ENABLE_WAYLAND=1
+export XDG_SESSION_TYPE=wayland
+
+https://wiki.archlinux.org/index.php/Firefox
+https://github.com/gorhill/uBlock
+https://github.com/notracking/hosts-blocklists
+https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
+https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks
+https://www.google.com/chrome/browser/privacy/whitepaper.html
+https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections
+https://github.com/arkenfox/user.js
+https://github.com/pyllyukko/user.js/
+https://ffprofile.com
+
+nextdns.io
+nameserver 9.9.9.9
+nameserver 1.0.0.1
