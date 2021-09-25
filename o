@@ -55,8 +55,6 @@ swaymsg "output * dpms on"
 swaymsg "output * dpms off"
 
 ratbagctl "Logitech G203 Prodigy Gaming Mouse" led 0 set mode off
-export MOZ_ENABLE_WAYLAND=1
-export XDG_SESSION_TYPE=wayland
 
 https://wiki.archlinux.org/index.php/Firefox
 https://github.com/gorhill/uBlock
