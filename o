@@ -46,9 +46,6 @@ output VGA-1 mode 1280x1024@75Hz
 for_window [app_id="mpv"] floating enable
 xwayland disable
 
-swaymsg "output * dpms on"
-swaymsg "output * dpms off"
-
 ratbagctl "Logitech G203 Prodigy Gaming Mouse" led 0 set mode off
 
 https://wiki.archlinux.org/index.php/Firefox
@@ -69,3 +66,6 @@ tar -cf - dir | openssl enc -aes256 -pbkdf2 -pass pass: -out .tar
 openssl enc -d -aes256 -pbkdf2 -pass pass: -in .tar | tar -x
 tar -zcf - dir | openssl enc -aes256 -pbkdf2 -pass pass: -out .tgz
 openssl enc -d -aes256 -pbkdf2 -pass pass: -in .tgz | tar -xz
+
+swaymsg "output * dpms on"
+swaymsg "output * dpms off"
