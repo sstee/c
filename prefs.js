@@ -65,6 +65,7 @@ user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("devtools.chrome.enabled", false);
 user_pref("devtools.debugger.remote-enabled", false);
 user_pref("dom.ipc.processCount", 1);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 user_pref("general.smoothScroll", false);
 user_pref("identity.fxaccounts.enabled", false);
