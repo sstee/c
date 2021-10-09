@@ -59,7 +59,6 @@ user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest", false);
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 user_pref("browser.urlbar.suggest.searches", false);
-user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("captivedetect.canonicalURL", "");
 user_pref("datareporting.healthreport.uploadEnabled", false);
