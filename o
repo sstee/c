@@ -4,15 +4,15 @@ cat /proc/cpuinfo lscpu dmesg lm_sensors
 sync && echo 3 > /proc/sys/vm/drop_caches
 Alt + SysRq, REISUB
 e2scrub_all e4defrag e2fsck -D smartctl -a /dev/sd hdparm -I /dev/sd badblocks -sv -b 4096 -c 1024 /dev/sd
-mount -o noatime,commit=60 /dev/sd /mnt/1 
+mount -o noatime,commit=60 /dev/sd /mnt/1
 cfdisk mkfs.ext4 -m 0 -b 4096 -i 8388608 /dev/sd
 find / -name \*.log
 
 cat  >> .bashrc
 echo 'unset HISTFILE' >> ~/.bash_profile
-wiki.archlinux.org/index.php/Improving_performance
-wiki.archlinux.org/index.php/Power_management
-wiki.archlinux.org/index.php/kernel_parameters
+wiki.archlinux.org/title/Improving_performance
+wiki.archlinux.org/title/Power_management
+wiki.archlinux.org/title/kernel_parameters
 quiet i915.enable_fbc=1
 cat /proc/sys/kernel/watchdog
 /etc/sysctl.d/99-sysctl.conf
@@ -46,9 +46,9 @@ output VGA-1 mode 1280x1024@75Hz
 for_window [app_id="mpv"] floating enable
 xwayland disable
 
-ratbagctl "Logitech G203 Prodigy Gaming Mouse" led 0 set mode off
+ratbagctl "Logitech G103 Prodigy Gaming Mouse" led 0 set mode off
 
-https://wiki.archlinux.org/index.php/Firefox
+https://wiki.archlinux.org/title/Firefox
 https://github.com/gorhill/uBlock
 https://github.com/notracking/hosts-blocklists
 https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
