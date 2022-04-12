@@ -4,7 +4,7 @@ cat /proc/cpuinfo lscpu dmesg lm_sensors
 sync && echo 3 > /proc/sys/vm/drop_caches
 Alt + SysRq, REISUB
 e4defrag e2fsck -D smartctl -a /dev/sd hdparm -I /dev/sd badblocks -sv -b 4096 -c 1024 /dev/sd
-mount -o noatime,commit=60 /dev/sd /mnt/1
+mount -o noatime /dev/sd /mnt/1
 cfdisk mkfs.ext4 -m 0 -b 4096 -i 8388608 /dev/sd
 find / -name \*.log
 
