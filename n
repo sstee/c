@@ -1,5 +1,5 @@
 #echo powersave | tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor
-apk upgrade -U ;apk add --no-cache ;apk cache clean; apk del --no-cache --purge ;
+apk upgrade -U ;apk add --no-cache ;apk cache clean; apk del -r --no-cache --purge ;
 pacman -Syyu && pacman -Scc && pacman -Qttdq | pacman -Rnsscd -; bleachbit -c system.localizations; rm -r .cache .config .local /var/log/pacman.log /usr/include /usr/lib/python2.7/ /usr/share/doc /usr/share/gtk-doc /usr/share/i18n/locales/* /usr/share/info /usr/share/licenses /usr/share/locale/* /usr/share/man
 
 bleachbit
