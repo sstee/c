@@ -1,9 +1,9 @@
-top vmstat
+top vmstat w
 ls -al /dev/disk/by-id lsblk blkid
 cat /proc/cpuinfo lscpu dmesg lm_sensors
 sync && echo 3 > /proc/sys/vm/drop_caches
 Alt + SysRq, REISUB
-e2scrub_all e4defrag e2fsck -D smartctl -a /dev/sd hdparm -I /dev/sd badblocks -sv -b 4096 -c 1024 /dev/sd
+e4defrag e2fsck -D smartctl -a /dev/sd hdparm -I /dev/sd badblocks -sv -b 4096 -c 1024 /dev/sd
 mount -o noatime,commit=60 /dev/sd /mnt/1
 cfdisk mkfs.ext4 -m 0 -b 4096 -i 8388608 /dev/sd
 find / -name \*.log
@@ -64,8 +64,6 @@ https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy
 https://www.google.com/chrome/browser/privacy/whitepaper.html
 https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections
 https://github.com/arkenfox/user.js
-https://github.com/pyllyukko/user.js/
-https://ffprofile.com
 nextdns.io
 nameserver 9.9.9.9
 nameserver 1.0.0.1
