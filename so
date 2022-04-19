@@ -55,15 +55,3 @@ openssl enc -d -aes256 -pbkdf2 -pass pass: -in .tgz | tar -xz
 
 swaymsg "output * dpms on"
 swaymsg "output * dpms off"
-
-https://wiki.archlinux.org/title/Firefox
-https://github.com/gorhill/uBlock
-https://github.com/notracking/hosts-blocklists
-https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
-https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks
-https://www.google.com/chrome/browser/privacy/whitepaper.html
-https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections
-https://github.com/arkenfox/user.js
-nextdns.io
-nameserver 9.9.9.9
-nameserver 1.0.0.1
